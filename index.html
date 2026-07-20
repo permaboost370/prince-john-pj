@@ -7,9 +7,12 @@
 <meta name="description" content="Being a true and faithful account of PRINCE JOHN, phony king of England, thumb-sucker, over-taxer of the peasantry. $PJ on Robinhood Chain." />
 <meta property="og:title" content="$PJ — The Phony King of Robinhood Chain" />
 <meta property="og:description" content="Too late to be known as John the First. Sure to be known as John the Worst." />
-<meta property="og:image" content="assets/prince-john.jpg" />
+<meta property="og:image" content="assets/brand/pj-banner-1500x500.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" href="assets/prince-john.jpg" />
+<meta name="twitter:image" content="assets/brand/pj-banner-1500x500.png" />
+<meta name="theme-color" content="#00c805" />
+<link rel="icon" href="assets/brand/pj-logo-500x500.png" />
+<link rel="apple-touch-icon" href="assets/brand/pj-logo-500x500.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -25,7 +28,14 @@
   --gold:#a97c28;
   --gold-lt:#c9a04a;
   --lapis:#22406f;
-  --verd:#3f5c3c;
+
+  /* verdigris — the manuscript pigment that happens to be Robinhood green */
+  --grn:#00c805;
+  --grn-dk:#04701a;
+  --grn-deep:#03350c;
+  --neon:#ccff00;
+  --night:#08130a;
+
   --rule:rgba(42,28,18,.28);
 
   --d:'Pirata One', serif;
@@ -57,7 +67,7 @@ body::after{
 .wrap{max-width:1080px;margin:0 auto;padding:0 30px;position:relative;z-index:3}
 .narrow{max-width:760px}
 section{padding:110px 0;position:relative;z-index:3}
-a{color:var(--ox);text-underline-offset:3px;text-decoration-thickness:1px}
+a{color:var(--grn-dk);text-underline-offset:3px;text-decoration-thickness:1px}
 
 /* ══ typography ══ */
 h1,h2,h3,h4{font-weight:400;line-height:1.06}
@@ -104,9 +114,8 @@ nav{
 .nav-in{display:flex;align-items:center;gap:20px;max-width:1080px;margin:0 auto;padding:11px 30px}
 .wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
 .wordmark img{
-  width:40px;height:40px;border-radius:2px;object-fit:cover;object-position:52% 28%;
-  border:1px solid var(--gold);box-shadow:0 0 0 2px var(--parch), 0 2px 6px rgba(42,28,18,.4);
-  filter:sepia(.32) saturate(.92) contrast(1.04);
+  width:42px;height:42px;border-radius:50%;object-fit:cover;
+  box-shadow:0 2px 8px rgba(42,28,18,.45), 0 0 16px -4px rgba(0,200,5,.6);
 }
 .wordmark b{font-family:var(--d);font-size:1.5rem;font-weight:400;letter-spacing:.02em}
 .nav-links{margin-left:auto;display:flex;gap:28px;align-items:center}
@@ -115,9 +124,9 @@ nav{
   text-decoration:none;color:var(--ink-soft);transition:color .2s;position:relative
 }
 .nav-links a::after{
-  content:'';position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--ox);transition:right .28s
+  content:'';position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--grn);transition:right .28s
 }
-.nav-links a:hover{color:var(--ox)}
+.nav-links a:hover{color:var(--grn-dk)}
 .nav-links a:hover::after{right:0}
 @media(max-width:900px){.nav-links{display:none}}
 
@@ -128,10 +137,10 @@ nav{
   padding:13px 28px;border-radius:2px;transition:all .22s;cursor:pointer;border:1px solid var(--ink);
 }
 .btn-ink{
-  background:var(--ox);color:var(--parch);border-color:#5e1414;
+  background:var(--grn);color:#04240a;border-color:var(--grn-dk);font-weight:600;
   box-shadow:2px 2px 0 rgba(42,28,18,.55)
 }
-.btn-ink:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(42,28,18,.55);background:var(--ox-lt)}
+.btn-ink:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(42,28,18,.55);background:var(--neon)}
 .btn-out{background:transparent;color:var(--ink);border-color:var(--rule);box-shadow:2px 2px 0 rgba(42,28,18,.2)}
 .btn-out:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(42,28,18,.28);border-color:var(--ink)}
 
@@ -153,6 +162,21 @@ h1{
   color:var(--ox);margin-bottom:22px;line-height:1.25
 }
 .hero p{font-size:1.08rem;max-width:52ch;color:var(--ink-soft)}
+.chainbadge{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;
+  font-family:var(--s);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--grn-dk);background:rgba(0,200,5,.1);
+  border:1px solid rgba(4,112,26,.4);padding:6px 14px;border-radius:2px;
+}
+.chainbadge i{
+  width:7px;height:7px;border-radius:50%;background:var(--grn);font-style:normal;
+  box-shadow:0 0 0 0 rgba(0,200,5,.65);animation:blip 2.4s ease-out infinite
+}
+@keyframes blip{
+  0%{box-shadow:0 0 0 0 rgba(0,200,5,.6)}
+  70%{box-shadow:0 0 0 9px rgba(0,200,5,0)}
+  100%{box-shadow:0 0 0 0 rgba(0,200,5,0)}
+}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;align-items:center}
 
 /* illuminated portrait frame */
@@ -178,27 +202,28 @@ h1{
 /* wax seal */
 .seal{
   width:112px;height:112px;border-radius:50%;display:grid;place-items:center;text-align:center;
-  background:radial-gradient(circle at 34% 30%, #b03434, var(--ox) 45%, #571212 100%);
-  color:#f0dcb8;font-family:var(--d);font-size:1.45rem;line-height:1;
-  box-shadow:0 8px 18px -8px rgba(42,28,18,.9), inset 0 -4px 10px rgba(0,0,0,.45), inset 0 3px 8px rgba(255,180,180,.25);
-  border:1px solid #4d1010;position:relative;flex:0 0 auto;
+  background:radial-gradient(circle at 34% 30%, #12e01c, var(--grn) 42%, var(--grn-deep) 100%);
+  color:#eaffe2;font-family:var(--d);font-size:1.45rem;line-height:1;
+  box-shadow:0 8px 18px -8px rgba(42,28,18,.9), inset 0 -4px 10px rgba(0,0,0,.5), inset 0 3px 8px rgba(200,255,180,.3), 0 0 26px -8px rgba(0,200,5,.6);
+  border:1px solid var(--grn-deep);position:relative;flex:0 0 auto;
   transform:rotate(-7deg);
 }
-.seal::after{content:'';position:absolute;inset:9px;border:1px dashed rgba(240,220,184,.45);border-radius:50%}
+.seal::after{content:'';position:absolute;inset:9px;border:1px dashed rgba(234,255,226,.5);border-radius:50%}
 .seal small{display:block;font-family:var(--s);font-size:.5rem;letter-spacing:.24em;margin-top:5px;opacity:.85}
 
 /* ══ proclamation band ══ */
 .band{
-  background:var(--ink);color:var(--parch-2);position:relative;z-index:3;
-  border-top:3px double rgba(201,160,74,.55);border-bottom:3px double rgba(201,160,74,.55);
+  background:var(--night);color:var(--parch-2);position:relative;z-index:3;
+  border-top:3px double var(--grn);border-bottom:3px double var(--grn);
   overflow:hidden;padding:15px 0;
+  box-shadow:0 0 40px -10px rgba(0,200,5,.5)
 }
 .band-track{display:inline-flex;gap:0;white-space:nowrap;animation:march 40s linear infinite}
 .band-track span{
   font-family:var(--s);font-style:italic;font-size:1.02rem;letter-spacing:.1em;
-  padding:0 30px;position:relative;color:var(--parch-2)
+  padding:0 30px;position:relative;color:#dcf5d2
 }
-.band-track span::after{content:'❦';position:absolute;right:-6px;color:var(--gold-lt);opacity:.75}
+.band-track span::after{content:'❦';position:absolute;right:-6px;color:var(--neon);opacity:.9}
 @keyframes march{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ══ chronicle / marginalia ══ */
@@ -246,7 +271,7 @@ tr:last-child td{border-bottom:0}
 .verse{position:relative;padding-left:26px}
 .verse::before{
   content:'';position:absolute;left:0;top:6px;bottom:6px;width:2px;
-  background:linear-gradient(180deg,var(--gold),rgba(169,124,40,.15))
+  background:linear-gradient(180deg,var(--grn),rgba(0,200,5,.12))
 }
 .verse q{
   font-family:var(--s);font-style:italic;font-size:1.24rem;line-height:1.5;
@@ -273,7 +298,8 @@ tr:last-child td{border-bottom:0}
 .clause p{color:var(--ink-soft);max-width:60ch}
 .clause .status{
   font-family:var(--s);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--ox);border:1px solid var(--rule);padding:3px 9px;display:inline-block;margin-top:12px
+  color:var(--grn-dk);border:1px solid rgba(4,112,26,.42);background:rgba(0,200,5,.09);
+  padding:3px 9px;display:inline-block;margin-top:12px
 }
 
 /* ══ instructions ══ */
@@ -301,7 +327,7 @@ tr:last-child td{border-bottom:0}
   font-family:var(--s);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
   background:var(--ink);color:var(--parch);border:0;padding:8px 15px;cursor:pointer;border-radius:2px;transition:.2s
 }
-.ca button:hover{background:var(--ox)}
+.ca button:hover{background:var(--grn);color:#04240a}
 
 /* ══ seals row (socials) ══ */
 .seals{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:8px}
@@ -315,12 +341,14 @@ tr:last-child td{border-bottom:0}
   box-shadow:0 18px 32px -22px rgba(42,28,18,.9)}
 .seal-card .disc{
   width:62px;height:62px;border-radius:50%;display:grid;place-items:center;
-  background:radial-gradient(circle at 34% 30%, #b03434, var(--ox) 48%, #571212);
-  border:1px solid #4d1010;box-shadow:inset 0 -3px 8px rgba(0,0,0,.45), 0 6px 12px -6px rgba(42,28,18,.8);
-  transition:transform .3s
+  background:radial-gradient(circle at 34% 30%, #12e01c, var(--grn) 45%, var(--grn-deep));
+  border:1px solid var(--grn-deep);
+  box-shadow:inset 0 -3px 8px rgba(0,0,0,.5), 0 6px 12px -6px rgba(42,28,18,.8), 0 0 20px -6px rgba(0,200,5,.55);
+  transition:transform .3s, box-shadow .3s
 }
-.seal-card:hover .disc{transform:rotate(-10deg) scale(1.06)}
-.seal-card svg{width:26px;height:26px;fill:#f0dcb8}
+.seal-card:hover .disc{transform:rotate(-10deg) scale(1.06);box-shadow:inset 0 -3px 8px rgba(0,0,0,.5), 0 0 30px -4px rgba(0,200,5,.8)}
+.seal-card:hover{border-color:rgba(4,112,26,.5)}
+.seal-card svg{width:26px;height:26px;fill:#eaffe2}
 .seal-card b{font-family:var(--d);font-size:1.3rem;font-weight:400;letter-spacing:.02em}
 .seal-card span{font-family:var(--s);font-style:italic;font-size:.92rem;color:var(--ink-soft)}
 
@@ -332,21 +360,21 @@ summary{
   list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline
 }
 summary::-webkit-details-marker{display:none}
-summary::after{content:'❧';color:var(--gold);font-size:1.05rem;transition:transform .3s;flex:0 0 auto}
+summary::after{content:'❧';color:var(--grn-dk);font-size:1.05rem;transition:transform .3s;flex:0 0 auto}
 details[open] summary::after{transform:rotate(90deg)}
 details p{margin-top:13px;color:var(--ink-soft);font-size:1.02rem;max-width:68ch}
 
 /* ══ tax counter ══ */
 .taxmeter{
   position:fixed;right:22px;bottom:22px;z-index:55;
-  background:var(--ink);color:var(--parch-2);border:1px solid var(--gold);
+  background:var(--night);color:var(--parch-2);border:1px solid var(--grn);
   padding:11px 17px;border-radius:2px;text-align:center;
-  box-shadow:0 10px 24px -12px rgba(0,0,0,.9);
+  box-shadow:0 10px 24px -12px rgba(0,0,0,.9), 0 0 22px -8px rgba(0,200,5,.7);
   transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.8,.3,1);
 }
 .taxmeter.on{transform:translateY(0)}
 .taxmeter .k{font-family:var(--s);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;opacity:.72;display:block}
-.taxmeter .v{font-family:var(--d);font-size:1.55rem;color:var(--gold-lt);line-height:1.15}
+.taxmeter .v{font-family:var(--d);font-size:1.55rem;color:var(--neon);line-height:1.15;text-shadow:0 0 12px rgba(204,255,0,.5)}
 @media(max-width:640px){.taxmeter{display:none}}
 
 /* ══ colophon ══ */
@@ -359,7 +387,7 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
 .foot-links{display:flex;gap:26px;justify-content:center;margin:26px 0 30px;flex-wrap:wrap}
 .foot-links a{font-family:var(--s);font-size:.92rem;letter-spacing:.14em;text-transform:uppercase;
   text-decoration:none;color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:2px}
-.foot-links a:hover{color:var(--ox);border-color:var(--ox)}
+.foot-links a:hover{color:var(--grn-dk);border-color:var(--grn)}
 .colophon{
   font-family:var(--s);font-style:italic;font-size:.88rem;color:var(--ink-soft);
   max-width:64ch;margin:0 auto;line-height:1.6;opacity:.85
@@ -379,7 +407,7 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
 
 <nav>
   <div class="nav-in">
-    <a class="wordmark" href="#top"><img src="assets/prince-john.jpg" alt=""/><b>$PJ</b></a>
+    <a class="wordmark" href="#top"><img src="assets/brand/pj-logo-500x500.png" alt=""/><b>$PJ</b></a>
     <div class="nav-links">
       <a href="#chronicle">The Chronicle</a>
       <a href="#treasury">The Treasury</a>
@@ -394,6 +422,7 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
+      <div class="chainbadge"><i></i>Minted upon Robinhood Chain</div>
       <p class="incipit">Here beginneth a true and faithful account of<br/>the reign of the second son of England —</p>
       <h1>Prince John</h1>
       <div class="h1-sub">The Phony King of England</div>
@@ -559,7 +588,7 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
         <span class="disc"><svg viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/></svg></span>
         <b>The Herald</b><span>Royal proclamations upon X</span>
       </a>
-      <a class="seal-card rv" href="https://t.me/" target="_blank" rel="noopener">
+      <a class="seal-card rv" href="https://t.me/princejohn_rh" target="_blank" rel="noopener">
         <span class="disc"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.23-1.86 8.76c-.14.62-.5.78-1.02.48l-2.82-2.08-1.36 1.31c-.15.15-.28.28-.57.28l.2-2.88 5.24-4.73c.23-.2-.05-.32-.35-.12L8.55 13.3l-2.79-.87c-.6-.19-.62-.61.13-.9l10.9-4.2c.5-.19.94.12.77.9z"/></svg></span>
         <b>The Throne Room</b><span>Assemble the court on Telegram</span>
       </a>
@@ -593,7 +622,7 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
     <div class="tag">The Phony King of Robinhood Chain</div>
     <div class="foot-links">
       <a href="https://x.com/" target="_blank" rel="noopener">X</a>
-      <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://t.me/princejohn_rh" target="_blank" rel="noopener">Telegram</a>
       <a href="https://dexscreener.com/" target="_blank" rel="noopener">DexScreener</a>
       <a href="#top">Return to the Throne</a>
     </div>
