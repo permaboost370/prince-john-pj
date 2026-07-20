@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>$PJ — Prince John · The Phony King of Robinhood Chain</title>
-<meta name="description" content="Being a true and faithful account of PRINCE JOHN, phony king of England, thumb-sucker, over-taxer of the peasantry. $PJ on Robinhood Chain." />
-<meta property="og:title" content="$PJ — The Phony King of Robinhood Chain" />
-<meta property="og:description" content="Too late to be known as John the First. Sure to be known as John the Worst." />
-<meta property="og:image" content="assets/brand/pj-banner-1500x500.png" />
+<title>$HISS — Sir Hiss · The Serpent Advisor of Robinhood Chain</title>
+<meta name="description" content="Being a true and faithful account of SIR HISS — hypnotist, serpent advisor, the wisest counsel ever ignored by an English throne. Warned everyone. Heeded by none. Kept in a barrel. $HISS on Robinhood Chain." />
+<meta property="og:title" content="$HISS — The Serpent Advisor of Robinhood Chain" />
+<meta property="og:description" content="Look into my eyes. I did try to warn you — and I remain, as ever, unpaid." />
+<meta property="og:image" content="assets/brand/hiss-banner-1500x500.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="assets/brand/pj-banner-1500x500.png" />
+<meta name="twitter:image" content="assets/brand/hiss-banner-1500x500.png" />
 <meta name="theme-color" content="#00c805" />
-<link rel="icon" href="assets/brand/pj-logo-500x500.png" />
-<link rel="apple-touch-icon" href="assets/brand/pj-logo-500x500.png" />
+<link rel="icon" href="assets/brand/hiss-logo-500x500.png" />
+<link rel="apple-touch-icon" href="assets/brand/hiss-logo-500x500.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -21,22 +21,32 @@
   --parch:#e9dcbe;
   --parch-2:#dfceaa;
   --parch-3:#d2bd92;
-  --ink:#2a1c12;
-  --ink-soft:#5a4530;
-  --ox:#7d1d1d;
-  --ox-lt:#a33232;
+  --ink:#241634;
+  --ink-soft:#4b3a5e;
+
+  /* rust — the red of his cap and collar */
+  --rust:#9a3316;
+  --rust-lt:#c05a2c;
+
   --gold:#a97c28;
   --gold-lt:#c9a04a;
-  --lapis:#22406f;
+
+  /* violet — Sir Hiss himself, and the field he coils against */
+  --violet:#5b45a0;
+  --violet-lt:#8266c6;
+  --violet-dp:#2a1c52;
+
+  /* olive — the serpent's scales */
+  --olive:#a98f3e;
 
   /* verdigris — the manuscript pigment that happens to be Robinhood green */
   --grn:#00c805;
   --grn-dk:#04701a;
   --grn-deep:#03350c;
   --neon:#ccff00;
-  --night:#08130a;
+  --night:#150a24;
 
-  --rule:rgba(42,28,18,.28);
+  --rule:rgba(42,28,45,.26);
 
   --d:'Pirata One', serif;
   --s:'IM Fell English', serif;
@@ -48,9 +58,9 @@ body{
   font-family:var(--b); color:var(--ink); font-size:19px; line-height:1.68;
   background:var(--parch);
   background-image:
-    radial-gradient(ellipse at 15% 5%, rgba(255,250,235,.75), transparent 55%),
-    radial-gradient(ellipse at 85% 30%, rgba(190,165,120,.35), transparent 50%),
-    radial-gradient(ellipse at 40% 90%, rgba(160,130,85,.32), transparent 55%),
+    radial-gradient(ellipse at 15% 5%, rgba(255,250,235,.72), transparent 55%),
+    radial-gradient(ellipse at 85% 30%, rgba(120,95,175,.22), transparent 50%),
+    radial-gradient(ellipse at 40% 90%, rgba(150,120,80,.30), transparent 55%),
     linear-gradient(175deg, var(--parch), var(--parch-2) 60%, var(--parch-3));
   overflow-x:hidden;
 }
@@ -62,7 +72,7 @@ body::before{
 /* vignette / aged edges */
 body::after{
   content:'';position:fixed;inset:0;z-index:2;pointer-events:none;
-  box-shadow:inset 0 0 200px rgba(90,60,25,.42), inset 0 0 60px rgba(70,45,20,.28);
+  box-shadow:inset 0 0 200px rgba(60,40,80,.40), inset 0 0 60px rgba(45,25,60,.28);
 }
 .wrap{max-width:1080px;margin:0 auto;padding:0 30px;position:relative;z-index:3}
 .narrow{max-width:760px}
@@ -77,7 +87,7 @@ h2{
   text-align:center;margin-bottom:6px;
 }
 .rubric{
-  font-family:var(--s);font-style:italic;font-size:.98rem;color:var(--ox);
+  font-family:var(--s);font-style:italic;font-size:.98rem;color:var(--rust);
   text-align:center;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;
 }
 .standfirst{
@@ -99,7 +109,7 @@ h2{
 /* ══ drop cap ══ */
 .dropcap::first-letter{
   font-family:var(--d);float:left;font-size:5.4rem;line-height:.82;
-  padding:6px 14px 0 0;color:var(--ox);
+  padding:6px 14px 0 0;color:var(--violet);
   text-shadow:1px 1px 0 rgba(169,124,40,.5);
 }
 
@@ -109,14 +119,13 @@ nav{
   background:linear-gradient(180deg, rgba(233,220,190,.97), rgba(228,213,178,.92));
   border-bottom:1px solid var(--rule);
   backdrop-filter:blur(6px);
-  box-shadow:0 1px 0 rgba(255,250,235,.6) inset, 0 6px 18px -14px rgba(42,28,18,.7);
+  box-shadow:0 1px 0 rgba(255,250,235,.6) inset, 0 6px 18px -14px rgba(42,28,45,.7);
 }
 .nav-in{display:flex;align-items:center;gap:20px;max-width:1080px;margin:0 auto;padding:11px 30px}
 .wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
 .wordmark img{
   width:42px;height:42px;border-radius:50%;object-fit:cover;
-  /* tight shadow only — a green glow here reads as haze at this size */
-  box-shadow:0 1px 4px rgba(42,28,18,.5);
+  box-shadow:0 1px 4px rgba(42,28,45,.5);
 }
 .wordmark b{font-family:var(--d);font-size:1.5rem;font-weight:400;letter-spacing:.02em}
 .nav-links{margin-left:auto;display:flex;gap:28px;align-items:center}
@@ -139,28 +148,28 @@ nav{
 }
 .btn-ink{
   background:var(--grn);color:#04240a;border-color:var(--grn-dk);font-weight:600;
-  box-shadow:2px 2px 0 rgba(42,28,18,.55)
+  box-shadow:2px 2px 0 rgba(42,28,45,.55)
 }
-.btn-ink:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(42,28,18,.55);background:var(--neon)}
-.btn-out{background:transparent;color:var(--ink);border-color:var(--rule);box-shadow:2px 2px 0 rgba(42,28,18,.2)}
-.btn-out:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(42,28,18,.28);border-color:var(--ink)}
+.btn-ink:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(42,28,45,.55);background:var(--neon)}
+.btn-out{background:transparent;color:var(--ink);border-color:var(--rule);box-shadow:2px 2px 0 rgba(42,28,45,.2)}
+.btn-out:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(42,28,45,.28);border-color:var(--ink)}
 
 /* ══ hero ══ */
 .hero{padding:80px 0 90px}
 .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center}
 @media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:48px}}
 .incipit{
-  font-family:var(--s);font-style:italic;color:var(--ox);font-size:1rem;
+  font-family:var(--s);font-style:italic;color:var(--rust);font-size:1rem;
   letter-spacing:.06em;line-height:1.5;margin-bottom:20px;
 }
 h1{
   font-family:var(--d);font-size:clamp(3.6rem,11vw,7.2rem);line-height:.9;
   color:var(--ink);margin:0 0 4px;letter-spacing:.005em;
-  text-shadow:2px 2px 0 rgba(169,124,40,.35);
+  text-shadow:2px 2px 0 rgba(91,69,160,.35);
 }
 .h1-sub{
   font-family:var(--s);font-style:italic;font-size:clamp(1.3rem,3.4vw,1.9rem);
-  color:var(--ox);margin-bottom:22px;line-height:1.25
+  color:var(--rust);margin-bottom:22px;line-height:1.25
 }
 .hero p{font-size:1.08rem;max-width:52ch;color:var(--ink-soft)}
 .chainbadge{
@@ -183,17 +192,16 @@ h1{
 /* illuminated portrait frame */
 .frame{position:relative;padding:16px;background:
   linear-gradient(135deg,#c9a04a,#8a6320 25%,#d9b869 50%,#8a6320 75%,#c9a04a);
-  border-radius:3px;box-shadow:0 22px 50px -26px rgba(42,28,18,.95), 0 2px 0 rgba(255,245,220,.35) inset;
+  border-radius:3px;box-shadow:0 22px 50px -26px rgba(42,28,45,.95), 0 2px 0 rgba(255,245,220,.35) inset;
   transform:rotate(-1.2deg)}
 .frame::before{
   content:'';position:absolute;inset:8px;border:1px solid rgba(60,40,15,.5);pointer-events:none;z-index:2
 }
 .frame img{display:block;width:100%;border:1px solid #6b4c17;
-  filter:sepia(.25) saturate(1.02) contrast(1.05) brightness(.99)}
+  filter:saturate(1.06) contrast(1.04) brightness(1.0)}
 .frame figcaption{
   font-family:var(--s);font-style:italic;font-size:.86rem;color:#3a2a14;
-  text-align:center;padding-top:11px;letter-spacing:.05em
-}
+  text-align:center;padding-top:11px;letter-spacing:.05em}
 .corner{position:absolute;width:22px;height:22px;border:2px solid rgba(60,40,15,.55);z-index:3}
 .corner.tl{top:6px;left:6px;border-right:0;border-bottom:0}
 .corner.tr{top:6px;right:6px;border-left:0;border-bottom:0}
@@ -204,8 +212,8 @@ h1{
 .seal{
   width:112px;height:112px;border-radius:50%;display:grid;place-items:center;text-align:center;
   background:radial-gradient(circle at 34% 30%, #12e01c, var(--grn) 42%, var(--grn-deep) 100%);
-  color:#eaffe2;font-family:var(--d);font-size:1.45rem;line-height:1;
-  box-shadow:0 8px 18px -8px rgba(42,28,18,.9), inset 0 -4px 10px rgba(0,0,0,.5), inset 0 3px 8px rgba(200,255,180,.3), 0 0 26px -8px rgba(0,200,5,.6);
+  color:#eaffe2;font-family:var(--d);font-size:1.15rem;line-height:1;letter-spacing:.02em;
+  box-shadow:0 8px 18px -8px rgba(42,28,45,.9), inset 0 -4px 10px rgba(0,0,0,.5), inset 0 3px 8px rgba(200,255,180,.3), 0 0 26px -8px rgba(0,200,5,.6);
   border:1px solid var(--grn-deep);position:relative;flex:0 0 auto;
   transform:rotate(-7deg);
 }
@@ -233,17 +241,17 @@ h1{
 .chronicle p+p{margin-top:18px}
 .margin-note{
   font-family:var(--s);font-style:italic;font-size:.94rem;color:var(--ink-soft);
-  border-left:2px solid var(--ox);padding:2px 0 2px 15px;line-height:1.5;
+  border-left:2px solid var(--rust);padding:2px 0 2px 15px;line-height:1.5;
   transform:rotate(-.5deg)
 }
 .margin-note+.margin-note{margin-top:26px}
 .margin-note b{display:block;font-style:normal;font-family:var(--b);font-size:.74rem;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--ox);margin-bottom:5px}
+  letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:5px}
 
 /* ══ ledger ══ */
 .ledger{
   border:1px solid var(--rule);background:rgba(255,250,232,.42);
-  box-shadow:0 14px 34px -24px rgba(42,28,18,.8), 0 1px 0 rgba(255,252,240,.7) inset;
+  box-shadow:0 14px 34px -24px rgba(42,28,45,.8), 0 1px 0 rgba(255,252,240,.7) inset;
   padding:8px;
 }
 .ledger-in{border:1px solid var(--rule);padding:30px 34px}
@@ -255,7 +263,7 @@ h1{
 table{width:100%;border-collapse:collapse}
 th{
   font-family:var(--s);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
-  text-align:left;color:var(--ox);padding-bottom:10px;border-bottom:2px solid var(--rule);font-weight:400
+  text-align:left;color:var(--rust);padding-bottom:10px;border-bottom:2px solid var(--rule);font-weight:400
 }
 th:last-child,td:last-child{text-align:right}
 td{
@@ -264,7 +272,7 @@ td{
 td:first-child{color:var(--ink-soft)}
 td.val{font-family:var(--d);font-size:1.32rem;color:var(--ink);letter-spacing:.01em}
 tr:last-child td{border-bottom:0}
-.struck{text-decoration:line-through;text-decoration-color:var(--ox);opacity:.5}
+.struck{text-decoration:line-through;text-decoration-color:var(--rust);opacity:.5}
 
 /* ══ verse ══ */
 .verse-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px 54px}
@@ -272,7 +280,7 @@ tr:last-child td{border-bottom:0}
 .verse{position:relative;padding-left:26px}
 .verse::before{
   content:'';position:absolute;left:0;top:6px;bottom:6px;width:2px;
-  background:linear-gradient(180deg,var(--grn),rgba(0,200,5,.12))
+  background:linear-gradient(180deg,var(--violet),rgba(91,69,160,.12))
 }
 .verse q{
   font-family:var(--s);font-style:italic;font-size:1.24rem;line-height:1.5;
@@ -280,7 +288,7 @@ tr:last-child td{border-bottom:0}
 }
 .verse cite{
   display:block;font-style:normal;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--ox);margin-top:12px
+  color:var(--rust);margin-top:12px
 }
 
 /* ══ decree clauses ══ */
@@ -293,7 +301,7 @@ tr:last-child td{border-bottom:0}
 @media(max-width:700px){.clause{grid-template-columns:1fr;gap:12px}}
 .clause .num{
   font-family:var(--d);font-size:3rem;line-height:.85;color:var(--gold);
-  text-shadow:1px 1px 0 rgba(42,28,18,.22)
+  text-shadow:1px 1px 0 rgba(42,28,45,.22)
 }
 .clause h4{font-family:var(--d);font-size:1.6rem;margin-bottom:7px}
 .clause p{color:var(--ink-soft);max-width:60ch}
@@ -311,7 +319,7 @@ tr:last-child td{border-bottom:0}
 }
 .step::before{
   counter-increment:s;content:counter(s,upper-roman);
-  font-family:var(--d);font-size:1.7rem;color:var(--ox);line-height:1.1;text-align:right
+  font-family:var(--d);font-size:1.7rem;color:var(--rust);line-height:1.1;text-align:right
 }
 .step h4{font-family:var(--s);font-size:1.24rem;font-style:italic;margin-bottom:5px;color:var(--ink)}
 .step p{color:var(--ink-soft);font-size:1rem;max-width:62ch}
@@ -322,7 +330,7 @@ tr:last-child td{border-bottom:0}
   padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
   box-shadow:0 1px 0 rgba(255,252,240,.8) inset
 }
-.ca .lab{font-family:var(--s);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ox)}
+.ca .lab{font-family:var(--s);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rust)}
 .ca code{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.8rem;color:var(--ink);word-break:break-all;flex:1;min-width:180px}
 .ca button{
   font-family:var(--s);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
@@ -339,12 +347,14 @@ tr:last-child td{border-bottom:0}
   display:flex;flex-direction:column;align-items:center;gap:14px
 }
 .seal-card:hover{background:rgba(255,250,232,.72);transform:translateY(-4px);
-  box-shadow:0 18px 32px -22px rgba(42,28,18,.9)}
+  box-shadow:0 18px 32px -22px rgba(42,28,45,.9)}
+.seal-card.soon{opacity:.72}
+.seal-card.soon:hover{transform:none}
 .seal-card .disc{
   width:62px;height:62px;border-radius:50%;display:grid;place-items:center;
   background:radial-gradient(circle at 34% 30%, #12e01c, var(--grn) 45%, var(--grn-deep));
   border:1px solid var(--grn-deep);
-  box-shadow:inset 0 -3px 8px rgba(0,0,0,.5), 0 6px 12px -6px rgba(42,28,18,.8), 0 0 20px -6px rgba(0,200,5,.55);
+  box-shadow:inset 0 -3px 8px rgba(0,0,0,.5), 0 6px 12px -6px rgba(42,28,45,.8), 0 0 20px -6px rgba(0,200,5,.55);
   transition:transform .3s, box-shadow .3s
 }
 .seal-card:hover .disc{transform:rotate(-10deg) scale(1.06);box-shadow:inset 0 -3px 8px rgba(0,0,0,.5), 0 0 30px -4px rgba(0,200,5,.8)}
@@ -369,10 +379,10 @@ details p{margin-top:13px;color:var(--ink-soft);font-size:1.02rem;max-width:68ch
 /* ══ colophon ══ */
 footer{
   border-top:1px solid var(--rule);padding:64px 0 54px;text-align:center;position:relative;z-index:3;
-  background:linear-gradient(180deg,transparent,rgba(160,130,85,.16))
+  background:linear-gradient(180deg,transparent,rgba(120,95,175,.16))
 }
 footer .mark{font-family:var(--d);font-size:2.3rem;color:var(--ink)}
-footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacing:.1em;margin-top:2px}
+footer .tag{font-family:var(--s);font-style:italic;color:var(--rust);letter-spacing:.1em;margin-top:2px}
 .foot-links{display:flex;gap:26px;justify-content:center;margin:26px 0 30px;flex-wrap:wrap}
 .foot-links a{font-family:var(--s);font-size:.92rem;letter-spacing:.14em;text-transform:uppercase;
   text-decoration:none;color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:2px}
@@ -396,15 +406,15 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
 
 <nav>
   <div class="nav-in">
-    <a class="wordmark" href="#top"><img src="assets/brand/pj-logo-500x500.png" alt=""/><b>$PJ</b></a>
+    <a class="wordmark" href="#top"><img src="assets/brand/hiss-logo-500x500.png" alt=""/><b>$HISS</b></a>
     <div class="nav-links">
       <a href="#chronicle">The Chronicle</a>
-      <a href="#treasury">The Treasury</a>
-      <a href="#decree">The Decree</a>
-      <a href="#instructions">Acquisition</a>
+      <a href="#counsel">The Counsel</a>
+      <a href="#coffers">The Coffers</a>
+      <a href="#prophecy">The Prophecy</a>
       <a href="#petitions">Petitions</a>
     </div>
-    <a class="btn btn-ink" href="#instructions">Swear Fealty</a>
+    <a class="btn btn-ink" href="#instructions">Be Hypnotized</a>
   </div>
 </nav>
 
@@ -412,137 +422,137 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
   <div class="wrap hero-grid">
     <div>
       <div class="chainbadge"><i></i>Minted upon Robinhood Chain</div>
-      <p class="incipit">Here beginneth a true and faithful account of<br/>the reign of the second son of England —</p>
-      <h1>Prince John</h1>
-      <div class="h1-sub">The Phony King of England</div>
-      <p>He taxes the peasantry to pieces and robs them of their bread. He throws an angry tantrum if he cannot have his way, and then he calls for Mum whilst suckin' his thumb. Now he has seized a second throne — <strong>$PJ</strong>, minted upon Robinhood Chain.</p>
+      <p class="incipit">Here beginneth a true and faithful account of<br/>the wisest counsel ever ignored by an English throne —</p>
+      <h1>Sir Hiss</h1>
+      <div class="h1-sub">The Serpent Advisor</div>
+      <p>He hypnotised a king off to the Crusades and handed a fool the throne. He saw every trap coming and was heeded on none. For his genius he was called an idiot and sealed inside a barrel of ale. Now the serpent keeps his own counsel — <strong>$HISS</strong>, minted upon Robinhood Chain.</p>
       <div class="hero-cta">
-        <a class="btn btn-ink" href="#instructions">Acquire $PJ</a>
-        <a class="btn btn-out" href="https://dexscreener.com/search?q=0x4acb7acfe409a5d929f4aa009d775a47a0bc3807" target="_blank" rel="noopener">Consult the Ledger</a>
-        <div class="seal">PJ<small>MMXXVI</small></div>
+        <a class="btn btn-ink" href="#instructions">Acquire $HISS</a>
+        <a class="btn btn-out" href="https://x.com/i/communities/1973811671073210437" target="_blank" rel="noopener">Join the Court</a>
+        <div class="seal">HISS<small>MMXXVI</small></div>
       </div>
       <div class="ca">
         <span class="lab">Contract</span>
-        <code id="ca-text">0x4acb7acfe409a5d929f4aa009d775a47a0bc3807</code>
+        <code id="ca-text">TBA — the serpent is still coiling</code>
         <button onclick="copyCA(this)">Copy</button>
       </div>
     </div>
     <figure class="frame">
       <span class="corner tl"></span><span class="corner tr"></span>
       <span class="corner bl"></span><span class="corner br"></span>
-      <img src="assets/prince-john.jpg" alt="Prince John, the phony king of England, wearing an oversized crown" />
-      <figcaption>His Royal Highness, taken from life · Nottingham, 1973</figcaption>
+      <img src="assets/sir-hiss.jpg" alt="Sir Hiss, the serpent advisor, in his red cap with a sly half-lidded gaze" />
+      <figcaption>Sir Hiss, advisor to the crown · taken from life · Nottingham, 1973</figcaption>
     </figure>
   </div>
 </header>
 
 <div class="band">
   <div class="band-track">
-    <span>Too late to be known as John the First</span><span>Sure to be known as John the Worst</span><span>Rob the poor to feed the rich</span><span>Taxes levied upon this token: none</span><span>The liquidity is burnt</span><span>Mummy!</span>
-    <span>Too late to be known as John the First</span><span>Sure to be known as John the Worst</span><span>Rob the poor to feed the rich</span><span>Taxes levied upon this token: none</span><span>The liquidity is burnt</span><span>Mummy!</span>
+    <span>Sssire, I did try to warn you</span><span>Look into my eyesss</span><span>You had me placed in a barrel of ale</span><span>Taxes levied upon this token: none</span><span>The liquidity is burnt</span><span>I remain, as ever, unpaid</span>
+    <span>Sssire, I did try to warn you</span><span>Look into my eyesss</span><span>You had me placed in a barrel of ale</span><span>Taxes levied upon this token: none</span><span>The liquidity is burnt</span><span>I remain, as ever, unpaid</span>
   </div>
 </div>
 
 <section id="chronicle">
   <div class="wrap">
     <div class="rubric rv">Chapter the First</div>
-    <h2 class="rv">A Lion, A Tyrant, A Toddler</h2>
+    <h2 class="rv">The Advisor They Never Deserved</h2>
     <div class="fleuron rv"><span>❦ ⚜ ❦</span></div>
     <div class="chronicle">
       <div class="rv">
-        <p class="dropcap">Prince John is the greedy, thumb-sucking antagonist of Disney's <em>Robin Hood</em> of the year 1973 — an anthropomorphic lion who seizes the crown of England whilst his brother, King Richard, is away upon crusade. He was given voice by <strong>Peter Ustinov</strong>, whose performance turned a straightforward despot into one of the most entertaining villains the studio ever committed to cel.</p>
-        <p>What makes him immortal is not his cruelty but his fragility. He hoards gold he has not earned. He raises taxes out of wounded pride rather than policy. He hypnotises his own snake advisor to avoid being told the truth. And the instant the world stops flattering him — a broken mirror, a burning castle, a song sung at his expense — the crown slips down over that pointed head, the thumb goes in, and he cries out for his mother.</p>
-        <p>He is a man who wants the throne without the crusade, the gold without the governing, and the title without a single one of the obligations attached to it. <strong>Which is to say: he was the first memecoin, and we are merely late to the mint.</strong></p>
+        <p class="dropcap">Sir Hiss is the sardonic serpent advisor of Disney's <em>Robin Hood</em> of the year 1973 — a hypnotist snake in a rakish red cap, given his marvellous gap-toothed lisp by <strong>Terry-Thomas</strong>. It was Hiss who hypnotised King Richard into leaving upon crusade, and so it was Hiss, not the thumb-sucking prince, whose cunning placed the crown of England upon the wrong head.</p>
+        <p>He is, quite plainly, the smartest creature at court. He reads every ambush before it springs, counsels caution before every disaster, and is proven right with tedious regularity. His reward for this is to be called an idiot, swatted with a sceptre, and stuffed head-first into a barrel of ale whenever the truth grows inconvenient.</p>
+        <p>He was always right and never once rich — a condition a great many of us will recognise. <strong>This time, the serpent keeps the upside for himself.</strong></p>
       </div>
       <aside>
-        <div class="margin-note rv"><b>Marginalia — Sir Hiss</b>Sire, I did try to warn you that the archer was in disguise. You had me placed in a barrel of ale.</div>
-        <div class="margin-note rv"><b>Marginalia — Sir Hiss</b>The peasants are singing again, Sire. I would counsel against tripling the taxes a fourth time.</div>
-        <div class="margin-note rv"><b>Marginalia — Sir Hiss</b>He is asleep. He is sucking his thumb. I remain, as ever, unpaid.</div>
+        <div class="margin-note rv"><b>Marginalia — Prince John</b>Hiss, you idiot! Have I ever had a chance to be king before? No.</div>
+        <div class="margin-note rv"><b>Marginalia — Prince John</b>Snakes. Barrel. Now. Seal his royal lips.</div>
+        <div class="margin-note rv"><b>Marginalia — Sir Hiss</b>I remain, as ever, correct — and, as ever, unpaid.</div>
       </aside>
     </div>
   </div>
 </section>
 
-<section id="verses" style="padding-top:0">
+<section id="counsel" style="padding-top:0">
   <div class="wrap">
     <div class="rubric rv">Chapter the Second</div>
-    <h2 class="rv">Verses Sung in Nottingham</h2>
-    <p class="standfirst rv">Taken from the ballad that so enraged His Highness that he doubled the levy on hearing it — then tripled it.</p>
+    <h2 class="rv">Counsel, Given and Ignored</h2>
+    <p class="standfirst rv">The advice was always sound. The advisor was always, somehow, in a barrel.</p>
     <div class="fleuron rv"><span>❦ ⚜ ❦</span></div>
     <div class="verse-wrap">
-      <div class="verse rv"><q>Too late to be known as John the First, I'm sure to be known as John the Worst.</q><cite>Prince John</cite></div>
-      <div class="verse rv"><q>Rob the poor to feed the rich.</q><cite>The Royal Fiscal Policy</cite></div>
-      <div class="verse rv"><q>While he taxes us to pieces and he robs us of our bread, King Richard's crown keeps slippin' down around that pointed head.</q><cite>The Phony King of England</cite></div>
-      <div class="verse rv"><q>He throws an angry tantrum if he cannot have his way, then he calls for Mum while he's suckin' his thumb.</q><cite>The peasants of Nottingham</cite></div>
-      <div class="verse rv"><q>Double the taxes! Triple the taxes! Squeeze every last drop out of those insolent, musical peasants!</q><cite>Prince John, upon hearing the song</cite></div>
-      <div class="verse rv"><q>Mummy!</q><cite>Prince John, at every conceivable crisis</cite></div>
+      <div class="verse rv"><q>Sire, I did try to warn you that the archer was in disguise.</q><cite>Sir Hiss, vindicated again</cite></div>
+      <div class="verse rv"><q>Snakes can't resist hypnotising.</q><cite>Sir Hiss, on his own nature</cite></div>
+      <div class="verse rv"><q>Look into my eyes.</q><cite>The serpent's only sales pitch</cite></div>
+      <div class="verse rv"><q>Hiss! You idiot! You gave the whole thing away!</q><cite>Prince John, blaming the advisor</cite></div>
+      <div class="verse rv"><q>You had me placed in a barrel of ale.</q><cite>Sir Hiss, on his compensation package</cite></div>
+      <div class="verse rv"><q>I remain, as ever, unpaid.</q><cite>Sir Hiss, closing the ledger</cite></div>
     </div>
   </div>
 </section>
 
-<section id="treasury" style="padding-top:0">
+<section id="coffers" style="padding-top:0">
   <div class="wrap narrow">
     <div class="rubric rv">Chapter the Third</div>
-    <h2 class="rv">The Royal Treasury</h2>
-    <p class="standfirst rv">An honest accounting — the first ever kept under his reign.</p>
+    <h2 class="rv">The Serpent's Ledger</h2>
+    <p class="standfirst rv">An honest accounting — for once the advisor is permitted to keep the books.</p>
     <div class="fleuron rv"><span>❦ ⚜ ❦</span></div>
     <div class="ledger rv">
       <div class="ledger-in">
-        <h3>Ledger of the Realm</h3>
+        <h3>Ledger of the Coil</h3>
         <div class="sub">Kept at Nottingham · Anno MMXXVI</div>
         <table>
           <tr><th>Particular</th><th>Sum</th></tr>
-          <tr><td>Total coin struck</td><td class="val">1,000,000,000</td></tr>
+          <tr><td>Total coin conjured</td><td class="val">1,000,000,000</td></tr>
           <tr><td>Levy upon purchase</td><td class="val">0%</td></tr>
           <tr><td>Levy upon sale</td><td class="val">0%</td></tr>
           <tr><td>Liquidity, committed to the fire</td><td class="val">100%</td></tr>
           <tr><td>Ownership of the contract</td><td class="val">Renounced</td></tr>
-          <tr><td>Allocation to the crown</td><td class="val">None</td></tr>
+          <tr><td>Allocation to the advisor</td><td class="val">None (he is used to it)</td></tr>
           <tr><td>Presale, private round, or favour</td><td class="val">None</td></tr>
-          <tr><td class="struck">Sheriff of Nottingham, collections</td><td class="val struck">Dismissed</td></tr>
+          <tr><td class="struck">Prince John's royal cut</td><td class="val struck">Denied</td></tr>
         </table>
       </div>
     </div>
-    <p class="standfirst rv" style="margin-top:26px">For the first time in his life, His Highness is taxing you nothing at all. Do not mistake this for character growth.</p>
+    <p class="standfirst rv" style="margin-top:26px">No tax, no cut, no crown taking a slice on the way past. The advisor has seen, at close range, exactly how that story ends.</p>
   </div>
 </section>
 
-<section id="decree" style="padding-top:0">
+<section id="prophecy" style="padding-top:0">
   <div class="wrap">
     <div class="rubric rv">Chapter the Fourth</div>
-    <h2 class="rv">The Royal Decree</h2>
-    <p class="standfirst rv">Sealed in wax. Enforced, in theory, by the Sheriff.</p>
+    <h2 class="rv">The Serpent's Prophecy</h2>
+    <p class="standfirst rv">Foreseen in full, as everything always is, by the one nobody listens to.</p>
     <div class="fleuron rv"><span>❦ ⚜ ❦</span></div>
     <div class="clauses">
       <div class="clause rv">
         <div class="num">I</div>
         <div>
-          <h4>The Seizure</h4>
-          <p>King Richard departs upon crusade. The throne is taken. $PJ is minted upon Robinhood Chain — liquidity burnt, ownership renounced, crown placed firmly if somewhat crookedly upon the head.</p>
+          <h4>The Hypnosis</h4>
+          <p>$HISS is minted upon Robinhood Chain — liquidity burnt, ownership renounced, the eyes set spinning. King Richard is already halfway to the Holy Land and none the wiser. Look into its eyes.</p>
           <span class="status">Executed</span>
         </div>
       </div>
       <div class="clause rv">
         <div class="num">II</div>
         <div>
-          <h4>The Taxation</h4>
-          <p>The realm takes notice. Listings upon the great ledgers, trending upon DexScreener, and a treasury opened to the meme-makers of the kingdom. The peasants begin, quietly, to sing.</p>
+          <h4>The Whisper</h4>
+          <p>Listings upon the great ledgers, a chart upon DexScreener, and a court gathered from the taverns of the realm. The peasants — and a few discerning whales — begin, quietly, to sway.</p>
           <span class="status">In progress</span>
         </div>
       </div>
       <div class="clause rv">
         <div class="num">III</div>
         <div>
-          <h4>The Tantrum</h4>
-          <p>Someone calls him phony. The taxes are doubled, then tripled. Volume goes vertical. Sir Hiss is dismissed for the eleventh time. Conversations begin with the larger exchanges.</p>
+          <h4>The Awakening</h4>
+          <p>The realm notices the advisor has quite outshone the crown he served. Volume coils vertical. Conversations begin with the larger exchanges. For the first reign in history, no one ends up in a barrel.</p>
           <span class="status">Foretold</span>
         </div>
       </div>
       <div class="clause rv">
         <div class="num">IV</div>
         <div>
-          <h4>The Reign</h4>
-          <p>The archer raids the treasury and the whole of it is returned to the people. $PJ takes its place as the mascot of Robinhood Chain. Mummy, at long last, is proud.</p>
+          <h4>The Reckoning</h4>
+          <p>The advisor is, at long and improbable last, paid. $HISS takes its place as the cleverest mascot on Robinhood Chain — and the snake, for once, gets to say <em>I told you so</em>.</p>
           <span class="status">Inevitable</span>
         </div>
       </div>
@@ -553,15 +563,15 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
 <section id="instructions" style="padding-top:0">
   <div class="wrap narrow">
     <div class="rubric rv">Chapter the Fifth</div>
-    <h2 class="rv">Instructions to the Peasantry</h2>
-    <p class="standfirst rv">Five steps to storm the castle. No archery required.</p>
+    <h2 class="rv">How to Be Hypnotized</h2>
+    <p class="standfirst rv">Five steps into the coil. No archery required — only eye contact.</p>
     <div class="fleuron rv"><span>❦ ⚜ ❦</span></div>
     <div class="steps">
       <div class="step rv"><div><h4>Procure a wallet</h4><p>Robinhood Wallet, MetaMask, or Rabby — any purse that speaks to Robinhood Chain, the Arbitrum-built Ethereum layer two.</p></div></div>
-      <div class="step rv"><div><h4>Bridge thy ETH</h4><p>Send ETH across to Robinhood Chain for swapping and for gas. Keep a little in reserve; even a phony king settles his tolls.</p></div></div>
-      <div class="step rv"><div><h4>Verify the contract</h4><p>Take the address from this page or from the official community on X. Trust no address whispered to you in a direct message. The Sheriff is not to be trusted.</p></div></div>
-      <div class="step rv"><div><h4>Swap for $PJ</h4><p>Proceed to Uniswap upon Robinhood Chain, paste the address, and exchange ETH for $PJ.</p></div></div>
-      <div class="step rv"><div><h4>Wear the crown</h4><p>Thou art royalty now. Join the court upon Telegram, post thy memes, and accept no responsibility whatsoever.</p></div></div>
+      <div class="step rv"><div><h4>Bridge thy ETH</h4><p>Send ETH across to Robinhood Chain for swapping and for gas. Keep a little in reserve; even a serpent settles his tolls.</p></div></div>
+      <div class="step rv"><div><h4>Verify the contract</h4><p>Take the address from this page or from the official court upon X. Trust no address whispered to you in a direct message. Even a snake has standards.</p></div></div>
+      <div class="step rv"><div><h4>Swap for $HISS</h4><p>Proceed to Uniswap upon Robinhood Chain, paste the address, and exchange ETH for $HISS.</p></div></div>
+      <div class="step rv"><div><h4>Coil into the court</h4><p>Thou art of the serpent's counsel now. Join the nest upon Telegram, post thy memes, and let no one place thee in a barrel.</p></div></div>
     </div>
   </div>
 </section>
@@ -570,20 +580,21 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
   <div class="wrap">
     <div class="rubric rv">Chapter the Sixth</div>
     <h2 class="rv">Seals of the Court</h2>
-    <p class="standfirst rv">Follow the crown. Spread the word. Sing the song that gets thy taxes tripled.</p>
+    <p class="standfirst rv">Coil up. Spread the word. Look everyone you meet directly in the eyes.</p>
     <div class="fleuron rv"><span>❦ ⚜ ❦</span></div>
     <div class="seals">
       <a class="seal-card rv" href="https://x.com/i/communities/1973811671073210437" target="_blank" rel="noopener">
         <span class="disc"><svg viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/></svg></span>
-        <b>The Assembly</b><span>The community upon X</span>
+        <b>The Assembly</b><span>The court upon X</span>
       </a>
-      <a class="seal-card rv" href="https://t.me/princejohn_rh" target="_blank" rel="noopener">
+      <a class="seal-card rv" href="https://t.me/sirhiss_rh" target="_blank" rel="noopener">
         <span class="disc"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.23-1.86 8.76c-.14.62-.5.78-1.02.48l-2.82-2.08-1.36 1.31c-.15.15-.28.28-.57.28l.2-2.88 5.24-4.73c.23-.2-.05-.32-.35-.12L8.55 13.3l-2.79-.87c-.6-.19-.62-.61.13-.9l10.9-4.2c.5-.19.94.12.77.9z"/></svg></span>
-        <b>The Throne Room</b><span>Assemble the court on Telegram</span>
+        <b>The Nest</b><span>Coil up on Telegram</span>
       </a>
-      <a class="seal-card rv" href="https://dexscreener.com/search?q=0x4acb7acfe409a5d929f4aa009d775a47a0bc3807" target="_blank" rel="noopener">
+      <!-- TODO: replace href with the DexScreener pair URL once $HISS is listed -->
+      <a class="seal-card soon rv" href="#coffers" aria-disabled="true">
         <span class="disc"><svg viewBox="0 0 24 24"><path d="M3 3h2v16h16v2H3zm5.5 12H6v-5h2.5zm4.5 0h-2.5V7H13zm4.5 0H15v-8h2.5zm4 0H19V4h2.5z"/></svg></span>
-        <b>The Ledger</b><span>Chart and holdings on DexScreener</span>
+        <b>The Ledger</b><span>Chart on DexScreener · listing soon</span>
       </a>
     </div>
   </div>
@@ -592,31 +603,32 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
 <section id="petitions" style="padding-top:0">
   <div class="wrap narrow">
     <div class="rubric rv">Chapter the Seventh</div>
-    <h2 class="rv">Petitions to the Crown</h2>
+    <h2 class="rv">Petitions to the Serpent</h2>
     <div class="fleuron rv"><span>❦ ⚜ ❦</span></div>
     <div class="rv">
-      <details open><summary>What is $PJ?</summary><p>A community meme token upon Robinhood Chain, themed after Prince John — the gold-hoarding, thumb-sucking lion of Disney's <em>Robin Hood</em> (1973). It carries no utility beyond memes, vibes, and an entirely unearned sense of monarchy.</p></details>
-      <details><summary>What is Robinhood Chain?</summary><p>Robinhood's Ethereum layer two, built upon the Arbitrum stack, carrying tokenised stocks that trade around the clock and plug into DeFi as collateral. Public mainnet opened on the first of July, 2026, with Uniswap, 1inch and Lighter live on the first day. A fitting realm for a token about robbing from the rich.</p></details>
-      <details><summary>Is there a tax?</summary><p>None upon purchase, none upon sale. Deeply ironic given the source material. The Sheriff of Nottingham has been relieved of his collections.</p></details>
-      <details><summary>Is the liquidity safe?</summary><p>Liquidity is burnt and ownership of the contract renounced. Nobody may drain the treasury — not even the phony king himself.</p></details>
-      <details><summary>Is this affiliated with Disney or Robinhood?</summary><p>It is not. $PJ is an independent, unofficial community project with no affiliation to, endorsement by, or connection with The Walt Disney Company or Robinhood Markets, Inc. All references to the character are parody and fan tribute.</p></details>
-      <details><summary>Will the price go up?</summary><p>"Too late to be known as John the First, I'm sure to be known as John the Worst." Conduct thine own research. Meme tokens are exceptionally high risk and thou shouldst commit only what thou canst afford to lose in full.</p></details>
+      <details open><summary>What is $HISS?</summary><p>A community meme token upon Robinhood Chain, themed after Sir Hiss — the hypnotist serpent advisor of Disney's <em>Robin Hood</em> (1973). It carries no utility beyond memes, vibes, and the quiet satisfaction of being right when nobody is listening.</p></details>
+      <details><summary>What is Robinhood Chain?</summary><p>Robinhood's Ethereum layer two, built upon the Arbitrum stack, carrying tokenised stocks that trade around the clock and plug into DeFi as collateral. Public mainnet opened on the first of July, 2026, with Uniswap, 1inch and Lighter live on the first day. A fitting realm for a token about being cleverer than the crown.</p></details>
+      <details><summary>Is there a tax?</summary><p>None upon purchase, none upon sale. The advisor watched, first-hand, what taxing the peasantry to pieces did to the last regime.</p></details>
+      <details><summary>Is the liquidity safe?</summary><p>Liquidity is burnt and ownership of the contract renounced. Nobody may drain the coffers — not even the serpent himself, and he is famously slippery.</p></details>
+      <details><summary>When is the contract live?</summary><p>The address is marked <em>TBA</em> until $HISS is deployed on Robinhood Chain. When it goes live it will be posted here and in the official court upon X first. Any address you see elsewhere before then is a trap — Sir Hiss would counsel against it, and for once you should listen.</p></details>
+      <details><summary>Is this affiliated with Disney or Robinhood?</summary><p>It is not. $HISS is an independent, unofficial community project with no affiliation to, endorsement by, or connection with The Walt Disney Company or Robinhood Markets, Inc. All references to the character are parody and fan tribute.</p></details>
+      <details><summary>Will the price go up?</summary><p>"Look into my eyes." Conduct thine own research. Meme tokens are exceptionally high risk and thou shouldst commit only what thou canst afford to lose in full.</p></details>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="mark">$PJ</div>
-    <div class="tag">The Phony King of Robinhood Chain</div>
+    <div class="mark">$HISS</div>
+    <div class="tag">The Serpent Advisor of Robinhood Chain</div>
     <div class="foot-links">
       <a href="https://x.com/i/communities/1973811671073210437" target="_blank" rel="noopener">X</a>
-      <a href="https://t.me/princejohn_rh" target="_blank" rel="noopener">Telegram</a>
-      <a href="https://dexscreener.com/search?q=0x4acb7acfe409a5d929f4aa009d775a47a0bc3807" target="_blank" rel="noopener">DexScreener</a>
-      <a href="#top">Return to the Throne</a>
+      <a href="https://t.me/sirhiss_rh" target="_blank" rel="noopener">Telegram</a>
+      <a href="#coffers">DexScreener · soon</a>
+      <a href="#top">Return to the Coil</a>
     </div>
-    <p class="colophon">$PJ is a meme token possessing no intrinsic value and offering no expectation of financial return. Not affiliated with The Walt Disney Company or Robinhood Markets, Inc. Character imagery is used as parody and fan tribute. Nothing herein constitutes financial advice. Crypto is perilous — never commit more than thou canst afford to lose entirely.</p>
-    <p class="colophon">Set in Pirata One and IM Fell English · Illuminated at Nottingham · MMXXVI</p>
+    <p class="colophon">$HISS is a meme token possessing no intrinsic value and offering no expectation of financial return. Not affiliated with The Walt Disney Company or Robinhood Markets, Inc. Character imagery is used as parody and fan tribute. Nothing herein constitutes financial advice. Crypto is perilous — never commit more than thou canst afford to lose entirely.</p>
+    <p class="colophon">Set in Pirata One and IM Fell English · Coiled at Nottingham · MMXXVI</p>
   </div>
 </footer>
 
