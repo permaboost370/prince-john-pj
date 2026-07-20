@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="assets/brand/pj-banner-1500x500.png" />
 <meta name="theme-color" content="#00c805" />
-<link rel="icon" href="assets/brand/pj-logo-500x500.png" />
+<link rel="icon" href="assets/brand/pj-mark-256.png" />
 <link rel="apple-touch-icon" href="assets/brand/pj-logo-500x500.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,7 +115,8 @@ nav{
 .wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
 .wordmark img{
   width:42px;height:42px;border-radius:50%;object-fit:cover;
-  box-shadow:0 2px 8px rgba(42,28,18,.45), 0 0 16px -4px rgba(0,200,5,.6);
+  /* tight shadow only — a green glow here reads as haze at this size */
+  box-shadow:0 1px 4px rgba(42,28,18,.5);
 }
 .wordmark b{font-family:var(--d);font-size:1.5rem;font-weight:400;letter-spacing:.02em}
 .nav-links{margin-left:auto;display:flex;gap:28px;align-items:center}
@@ -395,7 +396,7 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
 
 <nav>
   <div class="nav-in">
-    <a class="wordmark" href="#top"><img src="assets/brand/pj-logo-500x500.png" alt=""/><b>$PJ</b></a>
+    <a class="wordmark" href="#top"><img src="assets/brand/pj-mark-256.png" alt=""/><b>$PJ</b></a>
     <div class="nav-links">
       <a href="#chronicle">The Chronicle</a>
       <a href="#treasury">The Treasury</a>
