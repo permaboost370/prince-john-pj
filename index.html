@@ -364,18 +364,6 @@ summary::after{content:'❧';color:var(--grn-dk);font-size:1.05rem;transition:tr
 details[open] summary::after{transform:rotate(90deg)}
 details p{margin-top:13px;color:var(--ink-soft);font-size:1.02rem;max-width:68ch}
 
-/* ══ tax counter ══ */
-.taxmeter{
-  position:fixed;right:22px;bottom:22px;z-index:55;
-  background:var(--night);color:var(--parch-2);border:1px solid var(--grn);
-  padding:11px 17px;border-radius:2px;text-align:center;
-  box-shadow:0 10px 24px -12px rgba(0,0,0,.9), 0 0 22px -8px rgba(0,200,5,.7);
-  transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.8,.3,1);
-}
-.taxmeter.on{transform:translateY(0)}
-.taxmeter .k{font-family:var(--s);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;opacity:.72;display:block}
-.taxmeter .v{font-family:var(--d);font-size:1.55rem;color:var(--neon);line-height:1.15;text-shadow:0 0 12px rgba(204,255,0,.5)}
-@media(max-width:640px){.taxmeter{display:none}}
 
 /* ══ colophon ══ */
 footer{
@@ -631,11 +619,6 @@ footer .tag{font-family:var(--s);font-style:italic;color:var(--ox);letter-spacin
   </div>
 </footer>
 
-<div class="taxmeter" id="taxmeter">
-  <span class="k">Taxes raised</span>
-  <span class="v" id="taxval">×1</span>
-</div>
-
 <script>
 function copyCA(btn){
   const t=document.getElementById('ca-text').textContent.trim();
@@ -654,19 +637,6 @@ document.querySelectorAll('.rv').forEach((el,i)=>{
   io.observe(el);
 });
 
-/* he raises the taxes the further you read */
-const meter=document.getElementById('taxmeter'), val=document.getElementById('taxval');
-let last=1;
-addEventListener('scroll',()=>{
-  const max=document.body.scrollHeight-innerHeight;
-  const p=max>0?scrollY/max:0;
-  meter.classList.toggle('on',scrollY>420);
-  const mult=Math.max(1,Math.round(p*12));
-  if(mult!==last){
-    last=mult; val.textContent='×'+mult;
-    val.animate([{transform:'scale(1)'},{transform:'scale(1.28)'},{transform:'scale(1)'}],{duration:280,easing:'ease-out'});
-  }
-},{passive:true});
 </script>
 </body>
 </html>
